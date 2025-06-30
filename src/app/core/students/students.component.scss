@@ -144,18 +144,17 @@ div.cotact-info {
 
 .mat-drawer {
   background: rgb(255, 255, 255);
-  background: radial-gradient(circle, rgba(255, 255, 255, 1) 0%, rgb(237, 250, 248) 19%, rgba(255, 255, 255, 1) 71%, rgb(241, 253, 251) 100%);
-}
+ }
 
 
 .mat-drawer-content {
   background: rgb(255, 255, 255);
-  background: radial-gradient(circle, rgba(255, 255, 255, 1) 0%, rgb(240, 253, 252) 19%, rgba(255, 255, 255, 1) 71%, rgb(240, 253, 252) 100%);
+  background: $main-background-radial;
 }
 
 .mat-toolbar-single-row {
   background: rgb(255, 255, 255);
-  background: radial-gradient(circle, rgba(255, 255, 255, 1) 0%, rgb(240, 253, 252) 19%, rgba(255, 255, 255, 1) 71%, rgb(240, 253, 252) 100%);
+  background: $main-background-radial;
 }
 
 .absent-student,

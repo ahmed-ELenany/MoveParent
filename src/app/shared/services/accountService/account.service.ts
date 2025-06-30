@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { LoginRequest, LoginResponse } from './Login.model';
+import { LoginRequest, LoginResponse, LogoutRequest } from './Login.model';
 import { HttpClient } from '@angular/common/http';
 import { Configuration } from '../../../configurations/app.config';
 import { CookieService } from 'ngx-cookie-service';
@@ -25,8 +25,8 @@ export class AccountService {
   changePassword(changePasswordmodel: ChangePasswordRequest): Observable<ChangePasswordResponse> {
     return this._http.put<ChangePasswordResponse>(environment.api + Configuration.api.Account.changePassword, changePasswordmodel)
   }
-  logOut() {
-     this._http.post<ChangePasswordResponse>(environment.api + Configuration.api.Account.logout, {}).subscribe({
+  logOut(logoutModel:LogoutRequest) {
+     this._http.post<ChangePasswordResponse>(environment.api + Configuration.api.Account.logout,logoutModel).subscribe({
       next: _ => {
         this._customCookieService.clearlogOutCookies()
       },

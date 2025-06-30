@@ -67,7 +67,8 @@ export class LoginComponent implements OnInit, OnDestroy {
     let loginRequest: LoginRequest = {
       UserName: this.UserName.value,
       Password: this.Password.value,
-      DeviceToken: this._cookiesService.getCookieByKey(Configuration.cookies.DeviceToken)
+      DeviceToken: this._cookiesService.getCookieByKey(Configuration.cookies.DeviceToken),
+      MobileUserType: "1"
     }
     let loginSub = this._accountSerivice.login(loginRequest).subscribe({
       next: response => {

@@ -20,4 +20,10 @@ export interface LoginRequest{
   UserName: string;
   Password: string;
   DeviceToken?: string;
+  MobileUserType?: string;
+}
+
+export interface LogoutRequest{
+  firebaseToken: string;
+  
 }

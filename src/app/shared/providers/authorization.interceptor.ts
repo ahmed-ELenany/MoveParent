@@ -15,7 +15,7 @@ export class AuthorizationInterceptor implements HttpInterceptor {
   intercept(request: HttpRequest<unknown>, next: HttpHandler): Observable<HttpEvent<unknown>> {
     request = request.clone({
        headers: request.headers
-                  .set('Authorization', this._cookieSerivce.get(Configuration.cookies.Authorization))
+       .set('Authorization', this._cookieSerivce.get(Configuration.cookies.Authorization))
       });
     return next.handle(request);
   }

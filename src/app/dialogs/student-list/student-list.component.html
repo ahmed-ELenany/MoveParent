@@ -8,7 +8,7 @@
 
 <div class="student_info d-flex flex-row justify-content-between border-bottom mb-3  " *ngFor="let st of $any(studnets)">
   <p-avatar  [image]="'data:image/png;base64,'+ st.Image" styleClass="mr-2 align-self-center" size="xlarge"  shape="circle"></p-avatar>
-  <p-avatar *ngIf="st.Image.length < 1 || st.Image == '' "  ng label="{{st.Name[0].toUpperCase()}}" styleClass="mr-2 p-2" size="large" [style]="{'background-color':'#2196F3', 'color': '#ffffff'}" shape="circle"></p-avatar>
+  <p-avatar *ngIf="st.Image.length < 1 || st.Image == '' "  ng label="{{st.Name[0].toUpperCase()}}" styleClass="mr-2 p-2" size="large" [style]="{'background-color':'#f99409', 'color': '#ffffff'}" shape="circle"></p-avatar>
 
   <div class="mb-3" style="width: 215px;">
     <h4  class="mr-2 ml-2">{{st.Name}}</h4>

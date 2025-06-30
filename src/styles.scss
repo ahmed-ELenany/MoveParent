@@ -3,7 +3,7 @@ body {
   height: 100%;
   width: 100%;
   background: rgb(255, 255, 255);
-  background: radial-gradient(circle, rgba(255, 255, 255, 1) 0%, rgba(227, 251, 248, 1) 19%, rgba(255, 255, 255, 1) 71%, rgba(227, 251, 248, 1) 100%);
+  background:radial-gradient(circle,rgb(255,255,255) 0%,rgb(251 242 227 / 27%) 19%,rgb(255,255,255) 71%,rgb(251 248 227 / 32%) 100%);
 }
 
 body {
@@ -28,7 +28,7 @@ body {
   height: 100% !important;
   max-width: 100% !important;
   background: rgb(255, 255, 255) !important;
-  background: radial-gradient(circle, rgba(255, 255, 255, 1) 0%, rgb(240, 253, 252) 19%, rgba(255, 255, 255, 1) 71%, rgb(240, 253, 252) 100%) !important;
+  background: radial-gradient(circle,rgb(255,255,255) 0%,rgb(251 242 227 / 27%) 19%,rgb(255,255,255) 71%,rgb(251 248 227 / 32%) 100%) !important;
 }
 
 .modal-dialog {

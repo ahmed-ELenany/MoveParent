@@ -10,7 +10,7 @@
         <div *ngIf="menuData.parentImage.length > 1" class="profile-pic align-self-center"><img
             [src]="'data:image/png;base64,' + menuData.parentImage" alt=""
             class="rounded-circle profile-pic-img-parent"></div> -->
-            <p-avatar *ngIf="menuData.parentImage.length < 1 || menuData.parentImage == undefined"  ng label="{{menuData.parentName[0].toUpperCase()}}" styleClass="mr-2" size="small" [style]="{'background-color':'#2196F3', 'color': '#ffffff'}" shape="circle"></p-avatar>
+            <p-avatar *ngIf="menuData.parentImage.length < 1 || menuData.parentImage == undefined"  ng label="{{menuData.parentName[0].toUpperCase()}}" styleClass="mr-2" size="small" [style]="{'background-color':'#f99409', 'color': '#ffffff'}" shape="circle"></p-avatar>
 
         <div class="d-flex flex-column">
           <div class="parent-info text-secondary mr-2 ml-2">{{menuData.parentName}}</div>

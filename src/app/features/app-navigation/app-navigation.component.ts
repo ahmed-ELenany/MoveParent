@@ -11,6 +11,7 @@ import { CustomDialogService } from '../../shared/services/customDialogService/c
 import { AboutComponent, ChangePasswordComponent, ChangeLangComponent, StudentListComponent, NotificationComponent, AbsenceListComponent } from '../../dialogs/dialogs'
 import { MatDrawer, MatSidenav } from '@angular/material/sidenav';
 import { AccountService } from '../../shared/services/accountService/account.service';
+import { LogoutRequest } from 'src/app/shared/services/accountService/Login.model';
 
 @Component({
   selector: 'app-navigation',
@@ -74,7 +75,13 @@ export class AppNavigationComponent implements OnInit, OnDestroy {
     this.drawer.close()
   }
   logOut() {
-    this._accountService.logOut()
+
+    let logoutRequest: LogoutRequest = {
+      firebaseToken: this._cookieService.getCookieByKey(Configuration.cookies.DeviceToken)
+    }
+
+    this._accountService.logOut(logoutRequest)
+
     this._cookieService.clearlogOutCookies().then(_ => {
       this._router.navigate(['/login'])
     })
